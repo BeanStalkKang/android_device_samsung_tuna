@@ -75,6 +75,12 @@ PRODUCT_COPY_FILES += \
 	device/samsung/tuna/media_codecs.xml:system/etc/media_codecs.xml \
 	device/samsung/tuna/gps.conf:system/etc/gps.conf
 
+# Synapse Support
+PRODUCT_COPY_FILES += \
+	device/samsung/tuna/uci:root/sbin/uci \
+	$(foreach file,$(wildcard device/samsung/tuna/synapse/*),$(file):root/res/synapse/$(notdir $(file))) \
+	$(foreach file,$(wildcard device/samsung/tuna/synapse/actions/*),$(file):root/res/synapse/actions/$(notdir $(file)))
+
 # Wifi
 ifneq ($(TARGET_PREBUILT_WIFI_MODULE),)
 PRODUCT_COPY_FILES += \
