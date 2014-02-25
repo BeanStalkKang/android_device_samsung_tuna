@@ -189,6 +189,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.hwui.disable_scissor_opt=true
+	ro.bq.gpu_to_cpu_unsupported=1
 
 PRODUCT_CHARACTERISTICS := nosdcard
 
